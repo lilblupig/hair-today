@@ -41,7 +41,7 @@ if ($conn->connect_error) {
 
     <div class="container-fluid hero-container">
       <div class="row">
-        <div class="col-12 hero-text">
+        <div class="col-12 hero-text pt-2">
           <h1>Hair Today</h1>
           <p class="lead">All types of hair, we got you covered.</p>
         </div>
