@@ -13,6 +13,10 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+// Get all pages info from database, and store in variable
+$get_pages = "SELECT * FROM pages";
+$pages_result = $conn->query($get_pages);
+
 ?>
 
 <!DOCTYPE html>
