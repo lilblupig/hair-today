@@ -1,3 +1,20 @@
+<?php
+// Establish database info
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "hairtoday";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+?>
+
 <!DOCTYPE html>
 
 <html lang="en" class="h-100">
