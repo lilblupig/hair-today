@@ -61,13 +61,25 @@ $pages_result = $conn->query($get_pages);
       </div>
     </div>
 
-    <main class="container py-2 flex-shrink-0">
-      <div class="row">
-        <div class="col-12">
-          <h1>Words!</h1>
-          <p>Lots of words go here!  But I can't think of that many, so this will have to do :(</p>
+    <main class="container pt-4 pb-2 flex-shrink-0">
+        <div class="row">
+            <div class="col-12">
+                <?php
+                    if(!empty($_GET["pid"])) {
+                        $get_specific_page = "SELECT * FROM pages WHERE id=" . $_GET["pid"];
+                        $specific_result = $conn->query($get_specific_page);
+
+                        if($specific_result->num_rows > 0) {
+                            while($row = $specific_result->fetch_assoc()) { ?>
+                                <h1><?php echo $row["title"]; ?></h1>
+                                <p><?php echo $row["blurb"]; ?></p>
+                            <?php
+                            }
+                        }
+                    }
+                ?>
+            </div>
         </div>
-      </div>
     </main>
 
     <footer class="footer mt-auto py-2 bg-dark">
