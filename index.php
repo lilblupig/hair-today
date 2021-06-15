@@ -83,40 +83,40 @@ $pages_result = $conn->query($get_pages);
     </main>
 
     <footer class="footer mt-auto py-2 bg-dark">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-12 col-md-6">
-            <p>Contact Us</p>
-            <ul>
-              <li>01234 987650</li>
-              <li>hello@hair.cut</li>
-            </ul>
-          </div>
-          <div class="col-12 col-md-6">
-            <p>Socials</p>
-            <ul class="list-inline socials">
-              <li class="list-inline-item">
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener">
-                  <i class="fab fa-instagram-square px-2"></i>
-                  <span class="visually-hidden">Instagram</span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.pinterest.co.uk/" target="_blank" rel="noopener">
-                  <i class="fab fa-pinterest-square px-2" aria-hidden="true"></i>
-                  <span class="visually-hidden">Pinterest</span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.youtube.com/" target="_blank" rel="noopener">
-                  <i class="fab fa-youtube-square px-2" aria-hidden="true"></i>
-                  <span class="visually-hidden">YouTube</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12 col-md-6">
+                    <p>Contact Us</p>
+                    <ul>
+                        <li>01234 987650</li>
+                        <li>hello@hair.cut</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p>Socials</p>
+                    <ul class="list-inline socials">
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                                <i class="fab fa-instagram-square px-2"></i>
+                                <span class="visually-hidden">Instagram</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.pinterest.co.uk/" target="_blank" rel="noopener">
+                                <i class="fab fa-pinterest-square px-2" aria-hidden="true"></i>
+                                <span class="visually-hidden">Pinterest</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.youtube.com/" target="_blank" rel="noopener">
+                                <i class="fab fa-youtube-square px-2" aria-hidden="true"></i>
+                                <span class="visually-hidden">YouTube</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
     </footer>
 
     <!-- Scripts -->
