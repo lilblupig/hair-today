@@ -44,7 +44,7 @@ $pages_result = $conn->query($get_pages);
             <?php
                 if($pages_result->num_rows > 0) {
                     while($row = $pages_result->fetch_assoc()) { ?>
-                        <a href="index.php" class="nav-link">Test</a>
+                        <a href="index.php?pid=<?php echo $row["id"]; ?>" class="nav-link"><?php echo $row["title"]; ?></a>
                     <?php
                    }
                 }
