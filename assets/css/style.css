@@ -8,6 +8,16 @@ nav a {
     color: #ffc107;
 }
 
+nav a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+nav .current {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 /* Hero image */
 
 .hero-container {
@@ -25,7 +35,7 @@ nav a {
 
 .hero-text {
   z-index: 1;
-  background-color: #212529;
+  background-color: #212529b2;
   border: solid 3px #ffc107;
   border-radius: 10px;
 }

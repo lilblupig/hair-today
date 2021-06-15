@@ -39,7 +39,7 @@ $pages_result = $conn->query($get_pages);
 
     <nav class="navbar navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand">Hair Today!</a>
+            <a href="#" class="navbar-brand">Hair Today!</a>
 
             <?php
                 if($pages_result->num_rows > 0) {
@@ -87,9 +87,9 @@ $pages_result = $conn->query($get_pages);
             <div class="row text-center">
                 <div class="col-12 col-md-6">
                     <p>Contact Us</p>
-                    <ul>
-                        <li>01234 987650</li>
-                        <li>hello@hair.cut</li>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">01234 987650</li>
+                        <li class="list-inline-item">hello@hair.cut</li>
                     </ul>
                 </div>
                 <div class="col-12 col-md-6">
