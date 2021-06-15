@@ -105,3 +105,7 @@ $pages_result = $conn->query($get_pages);
   </body>
 
 </html>
+
+<?php
+$conn->close();
+?>
