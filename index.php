@@ -1,9 +1,9 @@
 <?php
 // Establish database info
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "hairtoday";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "hairtoday";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -23,24 +23,33 @@ $pages_result = $conn->query($get_pages);
 
 <html lang="en" class="h-100">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="Haircut, beards, colours, highlights, curly cut" />
-    <meta name="description" content="Unisex hairdresser website" />
-    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Hair Today</title>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="Haircut, beards, colours, highlights, curly cut" />
+        <meta name="description" content="Unisex hairdresser website" />
+        <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <title>Hair Today</title>
+    </head>
 
-  <body class="d-flex flex-column h-100">
+    <body class="d-flex flex-column h-100">
 
     <nav class="navbar navbar-dark bg-dark">
-      <div class="container">
-          <a class="navbar-brand">Hair Today!</a>
-      </div>
+        <div class="container">
+            <a class="navbar-brand">Hair Today!</a>
+
+            <?php
+                if($pages_result->num_rows > 0) {
+                    while($row = $pages_result->fetch_assoc()) { ?>
+                        <a href="index.php" class="nav-link">Test</a>
+                    <?php
+                   }
+                }
+            ?>
+        </div>
     </nav>
 
     <div class="container-fluid hero-container">
