@@ -79,12 +79,12 @@ $pages_result = $conn->query($get_pages);
                                 <p><?php echo $row["blurb"]; ?></p>
                             <?php
                             }
-                        } else {
-                            ?>
-                            <h1>Inclusive, Neutral Hair Styling</h1>
-                            <p>Here at Hair Today we just do hair. Scalp hair, face hair.  Not body hair yet, when our skincare services kick off we will add "Gone Tomorrow" to our name! Geddit?  But for now, seriously, need your hair cut, come say hi - we\'ve got it covered.'
-                            <?php
                         }
+                    } else {
+                        ?>
+                        <h1>Inclusive, Neutral Hair Styling</h1>
+                        <p>Here at Hair Today we just do hair. Scalp hair, face hair.  Not body hair yet, when our skincare services kick off we will add "Gone Tomorrow" to our name! Geddit?  But for now, seriously, need your hair cut, come say hi - we've got it covered.</p>
+                        <?php
                     }
                 ?>
             </div>
