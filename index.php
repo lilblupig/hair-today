@@ -39,7 +39,7 @@ $pages_result = $conn->query($get_pages);
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a href="index.php" class="navbar-brand">Hair Today!</a>
+            <a href="index.php" class="navbar-brand">Hair Today!</a> // Logo
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -78,6 +78,19 @@ $pages_result = $conn->query($get_pages);
                                 <h1><?php echo $row["title"]; ?></h1>
                                 <p><?php echo $row["blurb"]; ?></p>
                             <?php
+                                $get_people = "SELECT *
+
+                                FROM pages_people
+                                LEFT JOIN people ON people.id = pages_people.people_id
+                                WHERE pages_people.pages_id = " . $_GET["pid"];
+
+                                $people_result = $conn->query($get_people);
+                                if($people_result->num_rows > 0) {
+                                    while($row2 = $people_result->fetch_assoc()) { ?>
+                                    <p><?php echo $row2["first_name"];?>: skills => <?php echo $row2["skills"]; ?></p>
+                                <?php
+                                    }
+                                }
                             }
                         }
                     } else {
